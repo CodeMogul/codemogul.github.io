@@ -1,0 +1,159 @@
+html {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+body {
+  margin: 0px;
+  font-family: lft-etica, sans-serif;
+  /* font-family: 'Open Sans', sans-serif; */
+  margin: 0 auto;
+  background-color: #e4ebf1;
+  color: #323336;
+}
+
+.container {
+  background-color: white;
+}
+
+header {
+  display: flex;
+}
+
+.title {
+  flex: 1;
+}
+
+.contact-info {
+  flex-basis: 30%;
+  list-style: none;
+  padding-left: 0;
+}
+
+main {
+  max-width: 800px;
+  margin: 0px auto;
+  /* padding: 24px 80px; */
+  position: relative;
+  /* box-shadow: ; */
+  padding: 32px;
+  box-sizing: border-box;
+}
+
+h1, h2 {
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 24px;
+  letter-spacing: 1.3px;
+}
+
+.initials {
+  position: absolute;
+  top: 40px;
+  left: -24px;
+  background-color: #33d399;
+  font-weight: bold;
+  font-size: 0.8rem;
+  padding: 6px 12px;
+  text-align: center;
+}
+
+.light {
+  color: #707678;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p {
+  margin: 0.4rem 0;
+}
+
+section {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+section > h2 {
+  /* color: #C1C5C7; */
+  color: #33d399;
+  font-size: 0.8rem;
+  margin-bottom: 28px;
+  letter-spacing: 1.2px;
+}
+
+section > article {
+  margin-bottom: 40px;
+}
+
+article > header {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin: 0.5rem 0px;
+  letter-spacing: 1.1px;
+}
+
+ul {
+  margin: 0.8rem 0;
+  padding-left: 24px;
+}
+
+li {
+  margin-bottom: 4px;
+}
+
+.skills ul {
+  list-style: none;
+  padding: 0px;
+}
+
+.skills li {
+  padding: 4px 12px;
+  border: 1px solid #33d399;
+  display: inline-block;
+}
+
+@media only screen and (max-width: 576px) {
+  html {
+    font-size: 14px;
+  }
+
+  header {
+    display: block;
+  }
+
+  .skills ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .skills li {
+    display: block;
+    flex-basis: 40%;
+  }
+}
+
+@media only screen and (min-width: 577px) {
+  .container {
+    max-width: min(90vw, 1000px);
+    margin: 40px auto;
+    box-shadow: 0 1rem 3rem rgba(0,0,0,0.175);
+    border: 1px solid rgba(0,0,0,0.025);
+  }
+}
+
+@media print {
+  body {
+    background-color: white;
+  }
+
+  .page-break {
+    page-break-after: always;
+  }
+}
