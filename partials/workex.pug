@@ -1,0 +1,73 @@
+-
+  const jobs = [
+    {
+      org: 'Bizongo',
+      website: 'https://bizongo.com/',
+      roles: [
+        {
+          designation: 'Senior Software Engineer',
+          duration: 'July, 2020 - Present'
+        },
+        {
+          designation: 'Software Development Engineer - 2',
+          duration: 'Jan, 2019 - June, 2020'
+        }
+      ],
+      pars: [
+        'Working on a Artwork Management Tool that tracks an Artwork through various stages of approvals.',
+        'Actively involved in the end-to-end development of the Product, including Client Engagements, Feasiblity Analysis and Support, helping us achieve 10 Enterprise Clients within a span of 2 months.',
+        'Implemented multiple modules including Payments & Subscriptions, File Version Manager, Web Based Artwork Viewer + Proofing Tool, Custom Client based Forms and more.'
+      ]
+    },
+    {
+      org: 'Next Education India Pvt Ltd',
+      website: 'https://www.nexteducation.in/',
+      roles: [
+        {
+          designation: 'R&D Engineer - Lead',
+          duration: 'Jan, 2018 - Dec, 2018'
+        },
+        {
+          designation: 'R&D Engineer',
+          duration: 'Jan, Jan, 2017 - Dec, 2017'
+        }
+      ],
+      pars: [
+        'Lead a team of four, on a modular programmable robot powered by the Compute Module 3.',
+        'Worked across hardware and software stack throughout the product development cycle.',
+        "Built a desktop app using Electron.js, React and Google's Blockly, and used Python + C over MQTT for hardware manipulation through IPC."
+      ]
+    },
+    {
+      org: 'NIIT Limited',
+      website: 'https://www.niit.com/india/',
+      roles: [
+        {
+          designation: 'Software Engineer - Intern',
+          duration: 'Summer & Winter 2015'
+        }
+      ],
+      pars: [
+        'Built several Report Generation Modules for NIIT ERP using .NET Technologies',
+        'Worked on C#, RDLC, SQL Server and LINQ.'
+      ]
+    }
+  ]
+
+section.page-break
+  h2 Work Experience
+  
+  each job in jobs
+    article
+      header
+        a(href=job.website, target="_blank")= job.org
+
+      //- p.light(style="margin-bottom: 0")= `${job.oles[0].designation} | ${job.roles[0].duration}`
+      //- p.light(style="margin-top: 0")= `${job.roles[1].designation} | ${job.roles[1].duration}`
+
+      each role in job.roles
+        p.light.designation= `${role.designation} | ${role.duration}`
+
+      ul
+        each par in job.pars
+          li= par

@@ -1,2 +1,2 @@
-### Table of contents:
- - `index.html`   -   Siddhesh Nachane Resume
+### Contains Resume
+ -- To build, run: `yarn build`

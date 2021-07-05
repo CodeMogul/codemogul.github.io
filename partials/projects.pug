@@ -1,0 +1,36 @@
+-
+  const projects = [
+    {
+      name: 'Easy 2FA',
+      pars: [
+        'Building a pluggable Two Factor Authentication Service',
+        'Allows to integrate 2FA in your app and choose from multiple verification channels SMS, Email, Push Notification, QR, TOTP.'
+      ]
+    },
+    {
+      name: 'Automated Parking System',
+      pars: [
+        'Built a battery powered module to detect occupied slots in a parking lobby.',
+        'Stack: MERN, Modules: ESP8266-E12, magnetometer, ultrasonic sensor'
+      ]
+    },
+    {
+      name: 'Crypt Tweet',
+      pars: [
+        'Built a sever side script for a client that executed as a cron task',
+        'Track the tweets of a set of users and detect some pre-fixed keywords in the tweet',
+        'Place Limit orders using Bittrex API and notify the client on Telegram'
+      ]
+    }
+  ]
+
+section 
+  h2 Projects | Freelance
+
+  each project in projects 
+    article 
+      header= project.name 
+
+      ul 
+        each par in project.pars 
+          li= par

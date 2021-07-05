@@ -107,6 +107,10 @@ li {
   margin-bottom: 4px;
 }
 
+.designation {
+  margin: 0px;
+}
+
 .skills ul {
   list-style: none;
   padding: 0px;
@@ -156,4 +160,24 @@ li {
   .page-break {
     page-break-after: always;
   }
+}
+
+.light {
+  color: #767171;
+}
+
+.pink {
+  color: #f441ca;
+}
+
+.ochre {
+  color: #f7a333
+}
+
+.green {
+  color: #39b050;
+}
+
+.purple {
+  color: #762cb2;
 }

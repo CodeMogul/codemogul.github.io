@@ -1,0 +1,17 @@
+{
+  "name": "gh-pages",
+  "version": "1.0.0",
+  "description": "Github Pages for Siddhesh Nachane <siddhesh.nachane@outlook.com>",
+  "main": "index.js",
+  "repository": "git@github.com:CodeMogul/codemogul.github.io.git",
+  "author": "Siddhesh Nachane <siddhesh.nachane@outlook.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "pug": "^3.0.2"
+  },
+  "scripts": {
+    "start": "pug -w index.pug",
+    "build": "pug --pretty index.pug"
+  }
+}
