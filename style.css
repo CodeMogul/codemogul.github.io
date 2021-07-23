@@ -108,7 +108,7 @@ svg {
   display: inline-block;
 }
 
-@media (min-width: 576px) {
+@media screen and (min-width: 576px) {
   html {
     font-size: 16px;
   }
@@ -136,6 +136,10 @@ svg {
 @media print {
   html {
     font-size: 14px;
+  }
+
+  .container {
+    padding: 4rem;
   }
 
   body {
