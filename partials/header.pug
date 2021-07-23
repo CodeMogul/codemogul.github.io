@@ -7,12 +7,6 @@
       text: 'siddheshn19@gmail.com'
     },
     {
-      href: 'https://github.com/CodeMogul',
-      icon: 'fab fa-github',
-      target: '_blank',
-      text: 'codemogul'
-    },
-    {
       href: 'tel:+918233712380',
       icon: 'fas fa-address-book',
       target: '',
@@ -23,11 +17,17 @@
       icon: 'fab fa-linkedin',
       target: '_blank',
       text: 'siddhesh-nachane'
+    },
+    {
+      href: 'https://github.com/CodeMogul',
+      icon: 'fab fa-github',
+      target: '_blank',
+      text: 'codemogul'
     }
   ] 
 
-header 
-  .title 
+header.grid
+  div
     h1 Siddhesh Nachane 
     p Senior Software Engineer
     p.light Bangalore, India
@@ -38,7 +38,3 @@ header
         a(href=handle.href, target=handle.target)
           i(class=handle.icon)
           = ` ${handle.text}` 
-
-    .initials 
-      div S 
-      div N

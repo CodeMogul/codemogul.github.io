@@ -35,10 +35,15 @@ html(lang="en")
 
 
   body
-    .container 
-      main 
-        include partials/header
+    div.container
+      include partials/header
+      main
         include partials/workex
-        include partials/projects
-        include partials/education
-        include partials/skills
+        div.grid
+          div
+            include partials/projects
+            include partials/education
+          include partials/skills
+    
+
+

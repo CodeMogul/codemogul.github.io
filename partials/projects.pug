@@ -1,12 +1,18 @@
 -
   const projects = [
     {
-      name: 'Easy 2FA',
+      name: 'Cloud Kitchen POS',
       pars: [
-        'Building a pluggable Two Factor Authentication Service',
-        'Allows to integrate 2FA in your app and choose from multiple verification channels SMS, Email, Push Notification, QR, TOTP.'
+        'Developing a Smart POS for cloud kitchens with integration to Zomato, Swiggy APIs using Fastify and React.',
       ]
     },
+    //- {
+    //-   name: 'Easy 2FA',
+    //-   pars: [
+    //-     'Building a pluggable Two Factor Authentication Service',
+    //-     'Allows to integrate 2FA in your app and choose from multiple verification channels SMS, Email, Push Notification, QR, TOTP.'
+    //-   ]
+    //- },
     {
       name: 'Automated Parking System',
       pars: [
@@ -14,14 +20,13 @@
         'Stack: MERN, Modules: ESP8266-E12, magnetometer, ultrasonic sensor'
       ]
     },
-    {
-      name: 'Crypt Tweet',
-      pars: [
-        'Built a sever side script for a client that executed as a cron task',
-        'Track the tweets of a set of users and detect some pre-fixed keywords in the tweet',
-        'Place Limit orders using Bittrex API and notify the client on Telegram'
-      ]
-    }
+    //- {
+    //-   name: 'Crypt Tweet',
+    //-   pars: [
+    //-     'Track the tweets of a set of users and detect some pre-fixed keywords',
+    //-     'Place Limit orders using Bittrex API and notify the client on Telegram'
+    //-   ]
+    //- }
   ]
 
 section 
@@ -29,8 +34,8 @@ section
 
   each project in projects 
     article 
-      header= project.name 
+      h3= project.name 
 
-      ul 
+      ul
         each par in project.pars 
           li= par

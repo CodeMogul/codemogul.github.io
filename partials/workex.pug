@@ -3,70 +3,70 @@
     {
       org: 'Bizongo',
       website: 'https://bizongo.com/',
-      roles: [
-        {
-          designation: 'Senior Software Engineer',
-          duration: 'July, 2020 - Present'
-        },
-        {
-          designation: 'Software Development Engineer - 2',
-          duration: 'Jan, 2019 - June, 2020'
-        }
-      ],
+      role: {
+        designation: 'Senior Software Engineer',
+        duration: 'June, 2020 - Present'
+      },
       pars: [
-        'Working on a Artwork Management Tool that tracks an Artwork through various stages of approvals.',
-        'Actively involved in the end-to-end development of the Product, including Client Engagements, Feasiblity Analysis and Support, helping us achieve 10 Enterprise Clients within a span of 2 months.',
-        'Implemented multiple modules including Payments & Subscriptions, File Version Manager, Web Based Artwork Viewer + Proofing Tool, Custom Client based Forms and more.'
+        'Improved system scalability of multiple services including Artwork Management, UI Infra, User Management, Notifications, while maintaining code quality and extensibility.',
+        'Designed and implemented configurable Micro Frontends in React for Cataloguing and User Management services, for faster integration with other applications.',
+        'Helped Sales Team attain first 10 Enterprise Clients within 3 months, by being actively involved in Client Engagements, Feasibility Analysis and Support.'
+      ]
+    },
+    {
+      org: 'Bizongo',
+      website: 'https://bizongo.com/',
+      role: {
+        designation: 'Software Development Engineer - 2',
+        duration: 'Jan, 2019 - June, 2020'
+      },
+      pars: [
+        'Worked on an Artwork Management Tool that tracks an Artwork through various stages of approvals.',
+        'Developed features across stack using RoR, React, AWS S3 and AWS Lambda.',
+        'Implemented multiple modules including Payments & Subscriptions, Asset Manager, Artwork Proofing Viewer, Custom Client Forms and more.'
       ]
     },
     {
       org: 'Next Education India Pvt Ltd',
       website: 'https://www.nexteducation.in/',
-      roles: [
-        {
-          designation: 'R&D Engineer - Lead',
-          duration: 'Jan, 2018 - Dec, 2018'
-        },
-        {
-          designation: 'R&D Engineer',
-          duration: 'Jan, Jan, 2017 - Dec, 2017'
-        }
-      ],
+      role: {
+        designation: 'R&D Engineer',
+        duration: 'Jan, 2017 - Dec, 2018'
+      },
       pars: [
-        'Lead a team of four, on a modular programmable robot powered by the Compute Module 3.',
+        'Lead a team of four for a modular programmable robot powered by the Compute Module 3.',
         'Worked across hardware and software stack throughout the product development cycle.',
         "Built a desktop app using Electron.js, React and Google's Blockly, and used Python + C over MQTT for hardware manipulation through IPC."
       ]
     },
-    {
-      org: 'NIIT Limited',
-      website: 'https://www.niit.com/india/',
-      roles: [
-        {
-          designation: 'Software Engineer - Intern',
-          duration: 'Summer & Winter 2015'
-        }
-      ],
-      pars: [
-        'Built several Report Generation Modules for NIIT ERP using .NET Technologies',
-        'Worked on C#, RDLC, SQL Server and LINQ.'
-      ]
-    }
+    //- {
+    //-   org: 'NIIT Limited',
+    //-   website: 'https://www.niit.com/india/',
+    //-   role: {
+    //-     designation: 'Software Engineer - Intern',
+    //-     duration: 'Summer & Winter 2015'
+    //-   },
+    //-   pars: [
+    //-     'Built several Report Generation Modules for NIIT ERP using .NET Technologies',
+    //-     'Worked on C#, RDLC, SQL Server and LINQ.'
+    //-   ]
+    //- }
   ]
 
-section.page-break
+mixin institute(title, duration, name, website='#')
+  h3.flex-apart
+    span= title
+    small= duration
+  a.light(href=website target="_blank")
+      i.far.fa-building
+      = name
+
+section
   h2 Work Experience
   
   each job in jobs
     article
-      header
-        a(href=job.website, target="_blank")= job.org
-
-      //- p.light(style="margin-bottom: 0")= `${job.oles[0].designation} | ${job.roles[0].duration}`
-      //- p.light(style="margin-top: 0")= `${job.roles[1].designation} | ${job.roles[1].duration}`
-
-      each role in job.roles
-        p.light.designation= `${role.designation} | ${role.duration}`
+      +institute(job.role.designation, job.role.duration, job.org, job.website)
 
       ul
         each par in job.pars
