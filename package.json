@@ -7,11 +7,19 @@
   "author": "Siddhesh Nachane <siddhesh.nachane@outlook.com>",
   "license": "MIT",
   "private": false,
-  "dependencies": {
-    "pug": "^3.0.2"
-  },
-  "scripts": {
-    "start": "pug -w index.pug",
-    "build": "pug --pretty index.pug"
-  }
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview"
+	},
+	"dependencies": {
+		"preact": "^10.22.1",
+		"preact-iso": "^2.6.3",
+		"preact-render-to-string": "^6.5.10"
+	},
+	"devDependencies": {
+		"@preact/preset-vite": "^2.9.0",
+		"vite": "^5.3.3"
+	}
 }
