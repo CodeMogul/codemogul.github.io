@@ -14,7 +14,6 @@ html {
 
 body {
   font-family: lft-etica, sans-serif;
-  margin: 0 auto;
   background-color: #e4ebf1;
   color: var(--primary-color);
 }
@@ -40,6 +39,10 @@ h2 {
   font-weight: 500;
   border-bottom: 2px solid var(--main-color);
   margin-bottom: 8px;
+}
+
+header p {
+  font-size: 1rem;
 }
 
 .contact-info {
@@ -80,8 +83,13 @@ h3 {
   font-size: 1rem;
 }
 
+h4 {
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
 ul {
-  margin: 0.8rem 0 0;
+  margin: 0.625rem 0 0;
   padding-left: 24px;
 }
 
@@ -90,21 +98,68 @@ li {
   font-size: 0.875rem;
 }
 
+p {
+  font-size: 0.875rem;
+}
+
 svg {
   margin-right: 8px;
 }
 
 .skills ul {
-  margin: 0.6rem 0;
+  margin: 0.5rem 0;
   list-style: none;
   padding: 0px;
 }
 
 .skills li {
-  padding: 4px 8px;
-  margin: 4px;
+  padding: 0.25rem 0.5rem;
+  margin: 0.25rem;
   border: 1px solid #33d399;
   display: inline-block;
+}
+
+section > .achievements {
+  margin-bottom: 0.75rem;
+}
+
+section > .achievements:last-child {
+  margin-bottom: 0;
+}
+
+.print-only {
+  display: none;
+}
+
+.download-pdf {
+  text-decoration: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: black;
+  border-radius: 50%;
+  color: white;
+  padding: 8px;
+  text-align: center;
+  height: 32px;
+  width: 32px;
+  font-size: 28px;
+  opacity: 0;
+  animation: appear 2.0s ease 3.0s 1 normal forwards;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.download-pdf svg {
+  vertical-align: 0 !important;
+  margin: 0 !important;
 }
 
 @media screen and (min-width: 576px) {
@@ -117,39 +172,51 @@ svg {
   }
 
   .container {
-    max-width: 800px;
+    max-width: 840px;
     margin: 40px auto;
     box-shadow: 0 1rem 3rem rgba(0,0,0,0.175);
     border: 1px solid rgba(0,0,0,0.025);
     padding: 4rem;
   }
 
-  .grid {
+  .two-column {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-column-gap: 24px;
   }
 
+  .download-pdf {
+    bottom: 50px;
+    right: 80px;
+  }
 }
 
 @media print {
   html {
-    font-size: 14px;
-  }
-
-  .container {
-    padding: 4rem;
+    font-size: 12px;
   }
 
   body {
     background-color: white;
   }
 
+  .container {
+    padding: 0rem;
+  }
+
+  section {
+    margin-top: 1rem;
+  }
+
+  section > article {
+    margin-bottom: 0.75rem;
+  }
+
   .contact-info {
     margin: 0;
   }
 
-  .grid {
+  .two-column {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-column-gap: 24px;
@@ -157,6 +224,10 @@ svg {
 
   .page-break {
     page-break-after: always;
+  }
+
+  .print-only {
+    display: block;
   }
 }
 

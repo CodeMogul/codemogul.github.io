@@ -36,7 +36,7 @@ const content = {
 
 export default function Header() {
   return (
-    <header className="grid">
+    <header className="two-column">
       <div>
         <h1>{content.profile.name}</h1>
         <p>{content.profile.designation}</p>

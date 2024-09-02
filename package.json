@@ -2,7 +2,6 @@
   "name": "gh-pages",
   "version": "1.1.0",
   "description": "Github Pages for Siddhesh Nachane <siddhesh.nachane@outlook.com>",
-  "main": "index.js",
   "repository": "git@github.com:CodeMogul/codemogul.github.io.git",
   "author": "Siddhesh Nachane <siddhesh.nachane@outlook.com>",
   "license": "MIT",

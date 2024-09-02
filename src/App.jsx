@@ -1,23 +1,31 @@
 import { h } from 'preact';
 
-import Header from './components/Header';
-import Workex from './components/Workex';
-import Projects from './components/Projects';
-import Education from './components/Education';
-import Skills from './components/Skills';
+import Header from './sections/Header';
+import Workex from './sections/Workex';
+import Projects from './sections/Projects';
+import Education from './sections/Education';
+import Skills from './sections/Skills';
+import Summary from './sections/Summary';
+import Achievements from './sections/Achievements';
+import DownloadPdfButton from './components/DownloadPdfButton';
 
 export default function App() {
-  return (
+	return (
 		<div className="container">
 			<Header />
-			<Workex />
-			<div className="grid">
+			<div className="two-column">
 				<div>
-					<Projects />
+					<Summary />
+					<Workex />
 					<Education />
 				</div>
-				<Skills />
+				<div>
+					<Achievements />
+					<Skills />
+					<Projects />
+				</div>
 			</div>
+			<DownloadPdfButton />
 		</div>
-  )
+	)
 }

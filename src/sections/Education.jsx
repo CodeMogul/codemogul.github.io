@@ -1,5 +1,5 @@
 import { h } from 'preact';
-import { InstituteTitle } from './Workex';
+import InstituteTitle from '../components/InstituteTitle';
 
 const education = [
   {
@@ -7,7 +7,13 @@ const education = [
     duration: '2013 - 2017',
     institute: 'NIIT University',
     website: 'https://www.niituniversity.in/',
-  }
+  },
+  // {
+  //   degree: 'Senior Secondary - 12th (CBSE)',
+  //   duration: '2011 - 2013',
+  //   institute: 'DAV Public School',
+  //   website: 'https://davkota.org/',
+  // }
 ];
 
 export default function Education() {
